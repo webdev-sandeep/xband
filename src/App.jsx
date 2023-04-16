@@ -104,9 +104,9 @@ const App = () => {
                 <path
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
                   d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
                 />
               </svg>
@@ -217,7 +217,7 @@ const App = () => {
         </div>
       </section>
       <header className="sticky top-0 z-10">
-        <div className="flex justify-between bg-black text-white">
+        <div className="min-[470px]:flex justify-between bg-black text-white hidden">
           <nav className="flex text-xs uppercase">
             <HashLink
               smooth
@@ -301,6 +301,66 @@ const App = () => {
                 d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"
               />
             </svg>
+          </div>
+        </div>
+        <div className="max-[470px]:flex justify-between bg-black text-white hidden ">
+          <nav className="flex text-xs uppercase">
+            <HashLink
+              smooth
+              to={"/#home"}
+              className="block py-3 px-5 hover:bg-gray-300 hover:text-black"
+            >
+              Home
+            </HashLink>
+          </nav>
+          <div className="group flex items-center">
+            <div className="px-4 hover:bg-red-500 cursor-pointer h-full flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 17h14M5 12h14M5 7h14"
+                />
+              </svg>
+            </div>
+            <div className="absolute hidden group-hover:block top-10 left-0 px-2 py-1 w-full bg-black uppercase text-sm">
+              <HashLink
+                smooth
+                to={"/#band"}
+                className="block py-1 px-3 hover:bg-gray-300 hover:text-black"
+              >
+                Band
+              </HashLink>
+              <HashLink
+                smooth
+                to={"/#tour"}
+                className="block py-1 px-3 hover:bg-gray-300 hover:text-black"
+              >
+                Tour
+              </HashLink>
+              <HashLink
+                smooth
+                to={"/#contact"}
+                className="block py-1 px-3 hover:bg-gray-300 hover:text-black"
+              >
+                Contact
+              </HashLink>
+              <HashLink
+                smooth
+                to={"#"}
+                className="block py-1 px-3 hover:bg-gray-300 hover:text-black"
+              >
+                Merch
+              </HashLink>
+            </div>
           </div>
         </div>
       </header>
